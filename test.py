@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 from ldclient import LDClient
-from ldclient import Config
 
 if __name__ == "__main__":
   ld_client = LDClient("YOUR_API_KEY")
