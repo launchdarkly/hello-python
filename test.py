@@ -1,8 +1,8 @@
 #!/usr/bin/env python
-from ldclient import LDClient
+import ldclient
 
 if __name__ == "__main__":
-  ld_client = LDClient("YOUR_API_KEY")
+  ldclient.sdk_key = "YOUR_SDK_KEY"
 
   user = {
     "key": "bob@example.com",
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     }
   }
 
-  show_feature = ld_client.toggle("YOUR_FLAG_KEY", user, False)
+  show_feature = ldclient.variation("YOUR_FLAG_KEY", user, False)
 
   if show_feature:
     print "Showing your feature"
