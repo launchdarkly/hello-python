@@ -13,11 +13,11 @@ if __name__ == "__main__":
     }
   }
 
-  show_feature = ldclient.variation("YOUR_FLAG_KEY", user, False)
+  show_feature = ldclient.get().variation("YOUR_FLAG_KEY", user, False)
 
   if show_feature:
     print "Showing your feature"
   else:
     print "Not showing your feature"
 
-  ld_client.flush()
+  ldclient.get().flush()
