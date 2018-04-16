@@ -1,1 +1,1 @@
-ldclient-py>=5.0.2
+ldclient-py>=5.0.4
