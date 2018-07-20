@@ -31,4 +31,4 @@ if __name__ == "__main__":
   else:
     print "Not showing your feature"
 
-  ldclient.get().flush()
+  ldclient.get().close() # close the client before exiting the program - ensures that all events are delivered
