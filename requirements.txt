@@ -1,1 +1,1 @@
-ldclient-py>=6.6.0
+launchdarkly-server-sdk>=6.9.1
