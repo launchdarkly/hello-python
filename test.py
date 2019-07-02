@@ -27,8 +27,8 @@ if __name__ == "__main__":
   show_feature = ldclient.get().variation("YOUR_FLAG_KEY", user, False)
 
   if show_feature:
-    print "Showing your feature"
+    print("Showing your feature")
   else:
-    print "Not showing your feature"
+    print("Not showing your feature")
 
   ldclient.get().close() # close the client before exiting the program - ensures that all events are delivered
