@@ -1,1 +1,1 @@
-launchdarkly-server-sdk>=6.9.2
+launchdarkly-server-sdk>=7.0.0
