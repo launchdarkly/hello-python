@@ -3,6 +3,7 @@ import logging
 import sys
 
 import ldclient
+from ldclient.config import Config
 
 root = logging.getLogger()
 root.setLevel(logging.INFO)
@@ -12,8 +13,10 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 ch.setFormatter(formatter)
 root.addHandler(ch)
 
+
 if __name__ == "__main__":
-  ldclient.set_sdk_key("YOUR_SDK_KEY")
+  sdk_key = "YOUR_SDK_KEY"
+  ldclient.set_config(Config(sdk_key))
 
   user = {
     "key": "bob@example.com",
