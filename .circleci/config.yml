@@ -34,7 +34,7 @@ jobs:
             sed -i.bak "s/feature_flag_key *= *\".*\"/feature_flag_key = \"${LD_HELLO_WORLD_FLAG_KEY_WITH_TRUE_VALUE}\"/" test.py
       - run:
           name: Install dependencies
-          command: pip install -r requirements.txt
+          command: pip install --user -r requirements.txt
       - run:
           name: Run hello
           command: python test.py | tee output.txt
