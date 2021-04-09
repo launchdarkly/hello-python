@@ -41,4 +41,4 @@ jobs:
       - run:
           name: Check output
           command: |
-            grep "is true for this user" output.txt || (echo "Flag did not evaluate to expected true value" && exit 1)
+            grep "is True for this user" output.txt || (echo "Flag did not evaluate to expected true value" && exit 1)
