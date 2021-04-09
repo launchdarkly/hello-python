@@ -30,7 +30,7 @@ jobs:
       - run:
           name: insert SDK key and flag key into demo code
           command: |
-            sed -i.bak "s/sdk_key *= *\".*\"/sdk_key = \"${LD_HELLO_WORLD_SDK_KEY}\"/" main.rb
+            sed -i.bak "s/sdk_key *= *\".*\"/sdk_key = \"${LD_HELLO_WORLD_SDK_KEY}\"/" test.py
             sed -i.bak "s/feature_flag_key *= *\".*\"/feature_flag_key = \"${LD_HELLO_WORLD_FLAG_KEY_WITH_TRUE_VALUE}\"/" main.rb
       - run:
           name: Install dependencies
