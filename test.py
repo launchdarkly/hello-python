@@ -6,7 +6,7 @@ import ldclient
 from ldclient.config import Config
 
 # Set sdk_key to your LaunchDarkly SDK key before running
-sdk_key = "sdk-548e548a-5598-4901-958b-e9ef6b724db4"
+sdk_key = ""
 
 # Set feature_flag_key to the feature flag key you want to evaluate
 feature_flag_key = "my-boolean-flag"
