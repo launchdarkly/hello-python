@@ -15,15 +15,6 @@ def show_message(s):
   print("*** %s" % s)
   print()
 
-# root = logging.getLogger()
-# root.setLevel(logging.INFO)
-# ch = logging.StreamHandler(sys.stdout)
-# ch.setLevel(logging.INFO)
-# formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-# ch.setFormatter(formatter)
-# root.addHandler(ch)
-
-
 if __name__ == "__main__":
   if not sdk_key:
     show_message("Please edit test.py to set sdk_key to your LaunchDarkly SDK key first")
