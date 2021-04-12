@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-import logging
-import sys
-
 import ldclient
 from ldclient.config import Config
 
