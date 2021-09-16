@@ -24,7 +24,7 @@ workflows:
 jobs:
   build-run-linux:
     docker:
-      - image: circleci/python:3.5-jessie
+      - image: cimg/python:3.5
     steps:
       - checkout
       - run:
