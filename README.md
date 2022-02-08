@@ -6,7 +6,7 @@ This demo requires Python version 3.5 or higher.
 
 ## Build instructions 
 
-1. Install the LaunchDarkly Python SDK by running `pip install requirements.txt`
+1. Install the LaunchDarkly Python SDK by running `pip install -r requirements.txt`
 
 2. Edit `test.py` and set the value of `sdk_key` to your LaunchDarkly SDK key. If there is an existing boolean feature flag in your LaunchDarkly project that you want to evaluate, set `feature_flag_key` to the flag key.
 
