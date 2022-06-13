@@ -1,8 +1,8 @@
-# LaunchDarkly Sample Python Application 
+# LaunchDarkly sample Python application 
 
-We've built a simple console application that demonstrates how LaunchDarkly's SDK works.
+We've built a console application that demonstrates how LaunchDarkly's SDK works.
 
-Below, you'll find the basic build procedure, but for more comprehensive instructions, you can visit your [Quickstart page](https://app.launchdarkly.com/quickstart#/) or the [Python SDK reference guide](https://docs.launchdarkly.com/sdk/server-side/python).
+Below, you'll find the basic build procedure. For more comprehensive instructions, you can visit your [Quickstart page](https://app.launchdarkly.com/quickstart#/) or the [Python SDK reference guide](https://docs.launchdarkly.com/sdk/server-side/python).
 
 This demo requires Python version 3.5 or higher.
 
