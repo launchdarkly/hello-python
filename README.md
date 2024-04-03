@@ -22,4 +22,4 @@ This demo requires Python version 3.7 or higher.
     ```
 1. Run `python test.py`.
 
-You should receive the message `"Feature flag '<flag key>' is <true/false> for this user"`.
+You should receive the message `"Feature flag '<flag key>' is <true/false> for this context"`.
