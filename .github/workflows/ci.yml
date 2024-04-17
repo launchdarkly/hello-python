@@ -1,11 +1,14 @@
 name: Build and run
 on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 9 * * *'
   push:
-    branches: [ main ]
+    branches: [ main, 'feat/**' ]
     paths-ignore:
       - '**.md' # Do not need to run CI for markdown changes.
   pull_request:
-    branches: [ main ]
+    branches: [ main, 'feat/**' ]
     paths-ignore:
       - '**.md'
 
@@ -22,13 +25,13 @@ jobs:
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
-          python-version: 3.7
+          python-version: 3.8
 
       - name: Install dependencies
         run: pip install --user -r requirements.txt
 
-      - uses: launchdarkly/gh-actions/actions/verify-hello-app@verify-hello-app-v1.0.0
+      - uses: launchdarkly/gh-actions/actions/verify-hello-app@verify-hello-app-v1.0.1
         with:
           use_server_key: true
           role_arn: ${{ vars.AWS_ROLE_ARN }}
-          command: python test.py
+          command: python main.py
