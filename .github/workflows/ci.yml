@@ -27,11 +27,14 @@ jobs:
         with:
           python-version: 3.8
 
+      - name: Install poetry
+        uses: abatilo/actions-poetry@7b6d33e44b4f08d7021a1dee3c044e9c253d6439
+
       - name: Install dependencies
-        run: pip install --user -r requirements.txt
+        run: poetry install
 
       - uses: launchdarkly/gh-actions/actions/verify-hello-app@verify-hello-app-v1.0.1
         with:
           use_server_key: true
           role_arn: ${{ vars.AWS_ROLE_ARN }}
-          command: python main.py
+          command: poetry run python main.py
