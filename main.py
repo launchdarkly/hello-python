@@ -2,7 +2,7 @@ import os
 import ldclient
 from ldclient import Context
 from ldclient.config import Config
-from threading import Lock, Event
+from threading import Event
 from datetime import datetime
 from halo import Halo
 
@@ -23,6 +23,9 @@ def show_evaluation_result(key: str, value: bool):
     print()
     print(f"*** {now}: The {key} feature flag evaluates to {value}")
 
+    if value:
+        show_banner()
+
 
 def show_banner():
     print()
@@ -39,17 +42,8 @@ def show_banner():
 
 
 class FlagValueChangeListener:
-    def __init__(self):
-        self.__show_banner = True
-        self.__lock = Lock()
-
     def flag_value_change_listener(self, flag_change):
-        with self.__lock:
-            if self.__show_banner and flag_change.new_value:
-                show_banner()
-                self.__show_banner = False
-
-            show_evaluation_result(flag_change.key, flag_change.new_value)
+        show_evaluation_result(flag_change.key, flag_change.new_value)
 
 
 if __name__ == "__main__":
