@@ -1,2 +1,0 @@
-launchdarkly-server-sdk>=9.0.0
-halo>=0.0.3

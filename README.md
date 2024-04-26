@@ -15,7 +15,8 @@ This demo requires Python 3.8 or higher.
     export LAUNCHDARKLY_FLAG_KEY="my-boolean-flag"
     ```
 
-1. Install the required dependencies with `pip install -r requirements.txt`.
-1. On the command line, run `python main.py`
+1. Ensure you have [Poetry](https://python-poetry.org/) installed.
+1. Install the required dependencies with `poetry install`.
+1. On the command line, run `poetry run python main.py`
 
 You should receive the message "The <flagKey> feature flag evaluates to <flagValue>.". The application will run continuously and react to the flag changes in LaunchDarkly.
