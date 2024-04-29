@@ -3,12 +3,11 @@ import ldclient
 from ldclient import Context
 from ldclient.config import Config
 from threading import Event
-from datetime import datetime
 from halo import Halo
 
 
 # Set sdk_key to your LaunchDarkly SDK key.
-sdk_key = os.getenv('LAUNCHDARKLY_SERVER_KEY')
+sdk_key = os.getenv('LAUNCHDARKLY_SDK_KEY')
 
 # Set feature_flag_key to the feature flag key you want to evaluate.
 feature_flag_key = os.getenv('LAUNCHDARKLY_FLAG_KEY', 'sample-feature')
@@ -19,9 +18,8 @@ ci = os.getenv('CI')
 
 
 def show_evaluation_result(key: str, value: bool):
-    now = datetime.now().strftime('%H:%M:%S')
     print()
-    print(f"*** {now}: The {key} feature flag evaluates to {value}")
+    print(f"*** The {key} feature flag evaluates to {value}")
 
     if value:
         show_banner()
@@ -48,7 +46,7 @@ class FlagValueChangeListener:
 
 if __name__ == "__main__":
     if not sdk_key:
-        print("*** Please set the LAUNCHDARKLY_SERVER_KEY env first")
+        print("*** Please set the LAUNCHDARKLY_SDK_KEY env first")
         exit()
     if not feature_flag_key:
         print("*** Please set the LAUNCHDARKLY_FLAG_KEY env first")
