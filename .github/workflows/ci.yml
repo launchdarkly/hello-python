@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      - uses: launchdarkly/gh-actions/actions/verify-hello-app@verify-hello-app-v1.0.1
+      - uses: launchdarkly/gh-actions/actions/verify-hello-app@verify-hello-app-v2.0.0
         with:
           use_server_key: true
           role_arn: ${{ vars.AWS_ROLE_ARN }}
