@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.8
 
@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      - uses: launchdarkly/gh-actions/actions/verify-hello-app@verify-hello-app-v2.0.0
+      - uses: launchdarkly/gh-actions/actions/verify-hello-app@verify-hello-app-v2.0.1
         with:
           use_server_key: true
           role_arn: ${{ vars.AWS_ROLE_ARN }}
