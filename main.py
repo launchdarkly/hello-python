@@ -1,10 +1,14 @@
 import os
 import ldclient
+## uncomment the next line to enable debug logging
+## import sys
 from ldclient import Context
 from ldclient.config import Config
 from threading import Event
 from halo import Halo
-
+## uncomment the next two lines to enable debug logging
+## logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+## logging.getLogger("launchdarkly_sdk").setLevel(logging.DEBUG)
 
 # Set sdk_key to your LaunchDarkly SDK key.
 sdk_key = os.getenv('LAUNCHDARKLY_SDK_KEY')
