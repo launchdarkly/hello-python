@@ -69,6 +69,14 @@ if __name__ == "__main__":
     context = \
         Context.builder('example-user-key').kind('user').name('Sandy').build()
 
+    # If you want to try a custom context, uncomment the next six lines
+    #org_context = Context.builder("org-acme-123").kind("organization") \
+    #  .set("name", "Acme Corp") \
+    #  .set("industry", "retail") \
+    #  .set("region", "EMEA") \
+    #  .set("subscriptionTier", "enterprise") \
+    #  .build()
+    
     flag_value = ldclient.get().variation(feature_flag_key, context, False)
     show_evaluation_result(feature_flag_key, flag_value)
 
