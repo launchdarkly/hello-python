@@ -4,7 +4,7 @@ We've built a simple console application that demonstrates how LaunchDarkly's SD
 
 Below, you'll find the build procedure. For more comprehensive instructions, you can visit your [Quickstart page](https://app.launchdarkly.com/quickstart#/) or the [Python reference guide](https://docs.launchdarkly.com/sdk/server-side/python).
 
-This demo requires Python 3.8 or higher.
+This demo requires Python 3.9 or higher.
 
 ## Build instructions
 
