@@ -1,2 +1,6 @@
 .python-version
 poetry.lock
+.vercel
+.env
+__pycache__/
+.env*
