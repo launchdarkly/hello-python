@@ -1,14 +1,19 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'monthly'
     cooldown:
       default-days: 7
-  - package-ecosystem: "pip"
-    directory: "/"
+      exclude:
+        - 'launchdarkly/*'
+
+  - package-ecosystem: 'pip'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'monthly'
     cooldown:
       default-days: 7
+      exclude:
+        - 'launchdarkly-server-sdk'
